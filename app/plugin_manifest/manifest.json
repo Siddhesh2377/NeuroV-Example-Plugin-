@@ -1,0 +1,9 @@
+{
+  "main": "com.test.plugin_example.PluginExample",
+  "name": "Plugin Example",
+  "version": "1.0.0",
+  "description": "This Plugin is Used As an Test/Example, Devs need to do changes in this files, so that work their plugin can function properly, as NeuroV Guides it's self based on the name and description of the plugin ",
+  "plugin-api-version": "1.0.0",
+  "permissions": ["All Permission can be Added Here, More Docs will be added soon"],
+  "author": "YOUR NAME"
+}
