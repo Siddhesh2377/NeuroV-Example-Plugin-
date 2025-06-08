@@ -107,24 +107,5 @@ tasks.register("packagePluginZip") {
         }
 
         println("✅ Plugin ZIP created at: ${outputZip.absolutePath}")
-
-        // STEP 2: Upload ZIP to FTP server
-        println("Uploading to FTP...")
-        val uploadProcess = Runtime.getRuntime().exec(arrayOf(
-            "curl", "-T", outputZip.absolutePath,
-            "ftp://192.168.7.6:2121/Download/Plugins/"
-        ))
-        uploadProcess.inputStream.bufferedReader().use { it.lines().forEach { line -> println(line) } }
-        uploadProcess.waitFor()
-
-        println("✅ Upload complete!")
-
-        // STEP 3: Open FTP folder in file manager
-        println("Opening FTP folder...")
-        Runtime.getRuntime().exec(arrayOf(
-            "xdg-open", "ftp://192.168.7.6:2121/Download/Plugins/"
-        ))
-
-        println("✅ Done! Verify the file in your file manager.")
     }
 }
