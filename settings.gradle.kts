@@ -22,6 +22,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "List Applications Plugin"
+rootProject.name = "$PLUGIN_NAME"
 include(":app")
  
