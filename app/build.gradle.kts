@@ -9,11 +9,11 @@ plugins {
 }
 
 android {
-    namespace = "com.test.plugin_example"
+    namespace = "$PLUGIN_PACKAGE"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.test.plugin_example"
+        applicationId = "$PLUGIN_PACKAGE"
         minSdk = 33
         targetSdk = 36
         versionCode = 1
@@ -57,7 +57,7 @@ android {
 
 dependencies {
 
-    compileOnly(files("libs/plugin-1.0.0.aar"))
+    compileOnly(files("libs/$PLUGIN_VERSION"))
     implementation("com.google.android.material:material:1.12.0")
     implementation("androidx.lifecycle:lifecycle-runtime-compose:2.9.1")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.9.1")
